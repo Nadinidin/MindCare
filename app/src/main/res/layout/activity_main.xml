@@ -1,0 +1,539 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- WALLPAPER -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="Wallpaper MindCare"
+        android:scaleType="centerCrop"
+        android:src="@drawable/pp2" />
+
+    <!-- TOOLBAR -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#DDE8EDDF"
+        app:elevation="2dp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:title="MindCare"
+            app:titleTextColor="#4F6046">
+
+            <ImageView
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:layout_gravity="end|center_vertical"
+                android:layout_marginEnd="16dp"
+                android:contentDescription="Logo MindCare"
+                android:src="@drawable/logoapp" />
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!-- KONTEN UTAMA -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="18dp"
+            android:paddingEnd="18dp"
+            android:paddingTop="20dp"
+            android:paddingBottom="32dp">
+
+            <!-- WELCOME GLASS CARD -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="#BFFFFFFF"
+                app:cardCornerRadius="26dp"
+                app:cardElevation="5dp"
+                app:strokeColor="#E6FFFFFF"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:padding="20dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/font1"
+                            android:text="Selamat Datang!"
+                            android:textColor="#4F6046"
+                            android:textSize="23sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/txtSubtitle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="9dp"
+                            android:fontFamily="@font/font1"
+                            android:lineSpacingExtra="4dp"
+                            android:text="Halo! Yuk, jaga kesehatan mentalmu hari ini."
+                            android:textColor="#596548"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="68dp"
+                        android:layout_height="68dp"
+                        android:layout_marginStart="12dp"
+                        android:contentDescription="Logo MindCare"
+                        android:src="@drawable/logoapp" />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- MOTIVASI HARI INI -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                app:cardBackgroundColor="#CCF8F6E1"
+                app:cardCornerRadius="22dp"
+                app:cardElevation="3dp"
+                app:strokeColor="#CCFFFFFF"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="18dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/font1"
+                        android:text="Ruang Aman untuk Dirimu"
+                        android:textColor="#4F6046"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/font1"
+                        android:lineSpacingExtra="4dp"
+                        android:text="Tidak apa-apa beristirahat sejenak. Kesehatan mentalmu sama pentingnya dengan kesehatan fisik."
+                        android:textColor="#596548"
+                        android:textSize="13sp" />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- JUDUL LAYANAN -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="26dp"
+                android:fontFamily="@font/font1"
+                android:text="Kenali Tenaga Profesional"
+                android:textColor="#4F6046"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <!-- LAYANAN -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/materialCardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                app:cardBackgroundColor="#BFFFFFFF"
+                app:cardCornerRadius="24dp"
+                app:cardElevation="5dp"
+                app:strokeColor="#E6FFFFFF"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="18dp">
+
+                    <TextView
+                        android:id="@+id/txtJudulFitur"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/font1"
+                        android:text="Pilih informasi yang ingin kamu ketahui"
+                        android:textColor="#4F6046"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:orientation="horizontal">
+
+                        <!-- PSIKIATER -->
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="6dp"
+                            android:layout_weight="1"
+                            app:cardBackgroundColor="#DDF8F6E1"
+                            app:cardCornerRadius="18dp"
+                            app:cardElevation="0dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:padding="12dp">
+
+                                <ImageView
+                                    android:layout_width="42dp"
+                                    android:layout_height="42dp"
+                                    android:contentDescription="Ikon psikiater"
+                                    android:src="@android:drawable/ic_menu_info_details"
+                                    app:tint="@color/hijau" />
+
+                                <com.google.android.material.button.MaterialButton
+                                    android:id="@+id/btnSnackBar"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:minHeight="48dp"
+                                    android:text="Psikiater"
+                                    android:textAllCaps="false"
+                                    android:textColor="@color/white"
+                                    android:textSize="13sp"
+                                    app:backgroundTint="@color/hijau"
+                                    app:cornerRadius="12dp" />
+
+                            </LinearLayout>
+
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <!-- PSIKOLOG -->
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="6dp"
+                            android:layout_weight="1"
+                            app:cardBackgroundColor="#DDF8F6E1"
+                            app:cardCornerRadius="18dp"
+                            app:cardElevation="0dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:padding="12dp">
+
+                                <ImageView
+                                    android:layout_width="42dp"
+                                    android:layout_height="42dp"
+                                    android:contentDescription="Ikon psikolog"
+                                    android:src="@android:drawable/ic_menu_myplaces"
+                                    app:tint="@color/hijau" />
+
+                                <com.google.android.material.button.MaterialButton
+                                    android:id="@+id/btnPsikolog"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:minHeight="48dp"
+                                    android:text="Psikolog"
+                                    android:textAllCaps="false"
+                                    android:textColor="@color/white"
+                                    android:textSize="13sp"
+                                    app:backgroundTint="@color/hijau"
+                                    app:cornerRadius="12dp" />
+
+                            </LinearLayout>
+
+                        </com.google.android.material.card.MaterialCardView>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- JELAJAHI -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="26dp"
+                android:fontFamily="@font/font1"
+                android:text="Jelajahi MindCare"
+                android:textColor="#4F6046"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <!-- MENU ARTIKEL -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                app:cardBackgroundColor="#BFFFFFFF"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="4dp"
+                app:strokeColor="#E6FFFFFF"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="14dp">
+
+                    <ImageView
+                        android:layout_width="38dp"
+                        android:layout_height="38dp"
+                        android:contentDescription="Ikon artikel"
+                        android:src="@android:drawable/ic_menu_edit"
+                        app:tint="@color/hijau" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnArtikel"
+                        android:layout_width="0dp"
+                        android:layout_height="52dp"
+                        android:layout_marginStart="12dp"
+                        android:layout_weight="1"
+                        android:text="Artikel Kesehatan Mental"
+                        android:textAllCaps="false"
+                        android:textColor="#4F6046"
+                        app:backgroundTint="#DDF8F6E1"
+                        app:cornerRadius="14dp" />
+
+
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- MENU TENTANG KAMI -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                app:cardBackgroundColor="#BFFFFFFF"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="4dp"
+                app:strokeColor="#E6FFFFFF"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="14dp">
+
+                    <ImageView
+                        android:layout_width="38dp"
+                        android:layout_height="38dp"
+                        android:contentDescription="Ikon tentang MindCare"
+                        android:src="@android:drawable/ic_menu_help"
+                        app:tint="@color/hijau" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnToLima"
+                        android:layout_width="0dp"
+                        android:layout_height="52dp"
+                        android:layout_marginStart="12dp"
+                        android:layout_weight="1"
+                        android:text="Tentang MindCare"
+                        android:textAllCaps="false"
+                        android:textColor="#4F6046"
+                        app:backgroundTint="#DDF8F6E1"
+                        app:cornerRadius="14dp" />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- MENU RUANG KESEHATAN MENTAL -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                app:cardBackgroundColor="#BFFFFFFF"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="4dp"
+                app:strokeColor="#E6FFFFFF"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="14dp">
+
+                    <ImageView
+                        android:layout_width="38dp"
+                        android:layout_height="38dp"
+                        android:contentDescription="Ikon ruang kesehatan mental"
+                        android:src="@android:drawable/ic_menu_myplaces"
+                        app:tint="@color/hijau" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnFragment"
+                        android:layout_width="0dp"
+                        android:layout_height="52dp"
+                        android:layout_marginStart="12dp"
+                        android:layout_weight="1"
+                        android:text="Ruang Kesehatan Mental"
+                        android:textAllCaps="false"
+                        android:textColor="#4F6046"
+                        android:textSize="13sp"
+                        app:backgroundTint="#DDF8F6E1"
+                        app:cornerRadius="14dp" />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- AKUN -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="26dp"
+                android:fontFamily="@font/font1"
+                android:text="Akun Saya"
+                android:textColor="#4F6046"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardAkun"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                app:cardBackgroundColor="#BFFFFFFF"
+                app:cardCornerRadius="22dp"
+                app:cardElevation="4dp"
+                app:strokeColor="#E6FFFFFF"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="18dp">
+
+                    <TextView
+                        android:id="@+id/txtLabelAkun"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/font1"
+                        android:text="Informasi Akun"
+                        android:textColor="#4F6046"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txtUsername"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="Username"
+                        android:textColor="#4F6046"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/txtPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:text="••••••"
+                        android:textColor="#596548"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- TOMBOL NAVIGASI -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnKembali"
+                    android:layout_width="0dp"
+                    android:layout_height="52dp"
+                    android:layout_marginEnd="6dp"
+                    android:layout_weight="1"
+                    android:text="Kembali"
+                    android:textAllCaps="false"
+                    android:textColor="#4F6046"
+                    app:backgroundTint="#CCFFFFFF"
+                    app:cornerRadius="14dp"
+                    app:strokeColor="@color/hijau"
+                    app:strokeWidth="1dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnLogout"
+                    android:layout_width="0dp"
+                    android:layout_height="52dp"
+                    android:layout_marginStart="6dp"
+                    android:layout_weight="1"
+                    android:text="Logout"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    app:backgroundTint="@color/hijau"
+                    app:cornerRadius="14dp" />
+
+            </LinearLayout>
+
+            <!-- FOOTER -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="26dp"
+                android:fontFamily="@font/font1"
+                android:gravity="center"
+                android:text="MindCare • Your Mind Matters"
+                android:textColor="#596548"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
