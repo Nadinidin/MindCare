@@ -3,10 +3,9 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".Home.HomeFragment">
 
     <!-- WALLPAPER -->
     <ImageView
@@ -16,50 +15,22 @@
         android:scaleType="centerCrop"
         android:src="@drawable/pp2" />
 
-    <!-- TOOLBAR -->
-    <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/appBar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#DDE8EDDF"
-        app:elevation="2dp">
-
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            app:title="MindCare"
-            app:titleTextColor="#4F6046">
-
-            <ImageView
-                android:layout_width="34dp"
-                android:layout_height="34dp"
-                android:layout_gravity="end|center_vertical"
-                android:layout_marginEnd="16dp"
-                android:contentDescription="Logo MindCare"
-                android:src="@drawable/logoapp" />
-
-        </androidx.appcompat.widget.Toolbar>
-
-    </com.google.android.material.appbar.AppBarLayout>
-
-    <!-- KONTEN UTAMA -->
+    <!-- KONTEN HOME -->
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:fillViewport="true"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        android:fillViewport="true">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:paddingStart="18dp"
-            android:paddingEnd="18dp"
             android:paddingTop="20dp"
+            android:paddingEnd="18dp"
             android:paddingBottom="32dp">
 
-            <!-- WELCOME GLASS CARD -->
+            <!-- WELCOME CARD -->
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -72,8 +43,8 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
                     android:gravity="center_vertical"
+                    android:orientation="horizontal"
                     android:padding="20dp">
 
                     <LinearLayout
@@ -112,10 +83,9 @@
                         android:src="@drawable/logoapp" />
 
                 </LinearLayout>
-
             </com.google.android.material.card.MaterialCardView>
 
-            <!-- MOTIVASI HARI INI -->
+            <!-- RUANG AMAN -->
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -152,10 +122,9 @@
                         android:textSize="13sp" />
 
                 </LinearLayout>
-
             </com.google.android.material.card.MaterialCardView>
 
-            <!-- JUDUL LAYANAN -->
+            <!-- TENAGA PROFESIONAL -->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -166,7 +135,6 @@
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
-            <!-- LAYANAN -->
             <com.google.android.material.card.MaterialCardView
                 android:id="@+id/materialCardView"
                 android:layout_width="match_parent"
@@ -200,7 +168,6 @@
                         android:layout_marginTop="16dp"
                         android:orientation="horizontal">
 
-                        <!-- PSIKIATER -->
                         <com.google.android.material.card.MaterialCardView
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
@@ -238,10 +205,8 @@
                                     app:cornerRadius="12dp" />
 
                             </LinearLayout>
-
                         </com.google.android.material.card.MaterialCardView>
 
-                        <!-- PSIKOLOG -->
                         <com.google.android.material.card.MaterialCardView
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
@@ -279,16 +244,13 @@
                                     app:cornerRadius="12dp" />
 
                             </LinearLayout>
-
                         </com.google.android.material.card.MaterialCardView>
 
                     </LinearLayout>
-
                 </LinearLayout>
-
             </com.google.android.material.card.MaterialCardView>
 
-            <!-- JELAJAHI -->
+            <!-- JELAJAHI MINDCARE -->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -299,7 +261,7 @@
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
-            <!-- MENU ARTIKEL -->
+            <!-- ARTIKEL -->
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -336,13 +298,9 @@
                         app:backgroundTint="#DDF8F6E1"
                         app:cornerRadius="14dp" />
 
-
-
                 </LinearLayout>
-
             </com.google.android.material.card.MaterialCardView>
 
-            <!-- MENU TENTANG KAMI -->
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -380,10 +338,8 @@
                         app:cornerRadius="14dp" />
 
                 </LinearLayout>
-
             </com.google.android.material.card.MaterialCardView>
 
-            <!-- MENU RUANG KESEHATAN MENTAL -->
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -392,135 +348,8 @@
                 app:cardCornerRadius="20dp"
                 app:cardElevation="4dp"
                 app:strokeColor="#E6FFFFFF"
-                app:strokeWidth="1dp">
+                app:strokeWidth="1dp"/>
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal"
-                    android:padding="14dp">
-
-                    <ImageView
-                        android:layout_width="38dp"
-                        android:layout_height="38dp"
-                        android:contentDescription="Ikon ruang kesehatan mental"
-                        android:src="@android:drawable/ic_menu_myplaces"
-                        app:tint="@color/hijau" />
-
-                    <com.google.android.material.button.MaterialButton
-                        android:id="@+id/btnFragment"
-                        android:layout_width="0dp"
-                        android:layout_height="52dp"
-                        android:layout_marginStart="12dp"
-                        android:layout_weight="1"
-                        android:text="Ruang Kesehatan Mental"
-                        android:textAllCaps="false"
-                        android:textColor="#4F6046"
-                        android:textSize="13sp"
-                        app:backgroundTint="#DDF8F6E1"
-                        app:cornerRadius="14dp" />
-
-                </LinearLayout>
-
-            </com.google.android.material.card.MaterialCardView>
-
-            <!-- AKUN -->
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="26dp"
-                android:fontFamily="@font/font1"
-                android:text="Akun Saya"
-                android:textColor="#4F6046"
-                android:textSize="20sp"
-                android:textStyle="bold" />
-
-            <com.google.android.material.card.MaterialCardView
-                android:id="@+id/cardAkun"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                app:cardBackgroundColor="#BFFFFFFF"
-                app:cardCornerRadius="22dp"
-                app:cardElevation="4dp"
-                app:strokeColor="#E6FFFFFF"
-                app:strokeWidth="1dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:padding="18dp">
-
-                    <TextView
-                        android:id="@+id/txtLabelAkun"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/font1"
-                        android:text="Informasi Akun"
-                        android:textColor="#4F6046"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/txtUsername"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="12dp"
-                        android:text="Username"
-                        android:textColor="#4F6046"
-                        android:textSize="14sp" />
-
-                    <TextView
-                        android:id="@+id/txtPassword"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="6dp"
-                        android:text="••••••"
-                        android:textColor="#596548"
-                        android:textSize="14sp" />
-
-                </LinearLayout>
-
-            </com.google.android.material.card.MaterialCardView>
-
-            <!-- TOMBOL NAVIGASI -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:orientation="horizontal">
-
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btnKembali"
-                    android:layout_width="0dp"
-                    android:layout_height="52dp"
-                    android:layout_marginEnd="6dp"
-                    android:layout_weight="1"
-                    android:text="Kembali"
-                    android:textAllCaps="false"
-                    android:textColor="#4F6046"
-                    app:backgroundTint="#CCFFFFFF"
-                    app:cornerRadius="14dp"
-                    app:strokeColor="@color/hijau"
-                    app:strokeWidth="1dp" />
-
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btnLogout"
-                    android:layout_width="0dp"
-                    android:layout_height="52dp"
-                    android:layout_marginStart="6dp"
-                    android:layout_weight="1"
-                    android:text="Logout"
-                    android:textAllCaps="false"
-                    android:textColor="@color/white"
-                    app:backgroundTint="@color/hijau"
-                    app:cornerRadius="14dp" />
-
-            </LinearLayout>
-
-            <!-- FOOTER -->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -533,7 +362,5 @@
                 android:textStyle="bold" />
 
         </LinearLayout>
-
     </androidx.core.widget.NestedScrollView>
-
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

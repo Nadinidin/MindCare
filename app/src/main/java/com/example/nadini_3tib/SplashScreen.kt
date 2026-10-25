@@ -11,27 +11,49 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
 class SplashScreen : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         enableEdgeToEdge()
         setContentView(R.layout.activity_splash_screen)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
+
+        ViewCompat.setOnApplyWindowInsetsListener(
+            findViewById(R.id.main)
+        ) { v, insets ->
+            val systemBars = insets.getInsets(
+                WindowInsetsCompat.Type.systemBars()
+            )
+
+            v.setPadding(
+                systemBars.left,
+                systemBars.top,
+                systemBars.right,
+                systemBars.bottom
+            )
             insets
         }
-        val sharedPref = getSharedPreferences("user_pref", MODE_PRIVATE)
+
+        val sharedPref = getSharedPreferences(
+            "user_pref",
+            MODE_PRIVATE
+        )
 
         val isLogin = sharedPref.getBoolean("isLogin", false)
-        if (isLogin) {
-            startActivity(Intent(this, MainActivity::class.java))
-            finish()
-            return
-        }
+
         lifecycleScope.launch {
             delay(2000)
-            val intent = Intent(this@SplashScreen, LoginActivity::class.java)
-            startActivity(intent)
+
+            if (isLogin) {
+                startActivity(
+                    Intent(this@SplashScreen, BaseActivity::class.java)
+                )
+            } else {
+                startActivity(
+                    Intent(this@SplashScreen, LoginActivity::class.java)
+                )
+            }
+
             finish()
         }
     }

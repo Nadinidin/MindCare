@@ -1,9 +1,16 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-    <style name="Base.Theme.Nadini_3TIB" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+
+    <style name="Base.Theme.Nadini_3TIB"
+        parent="Theme.Material3.DayNight.NoActionBar">
     </style>
 
-    <style name="Theme.Nadini_3TIB" parent="Base.Theme.Nadini_3TIB" />
+    <style name="Theme.Nadini_3TIB"
+        parent="Base.Theme.Nadini_3TIB" />
+
+    <style name="BottomNavigationActiveIndicator"
+        parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+        <item name="android:color">@color/hijau</item>
+    </style>
+
+
 </resources>

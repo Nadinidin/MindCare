@@ -6,7 +6,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".pertemuan5.WebViewActivity">
+    tools:context=".Home.pertemuan5.WebViewActivity">
 
     <ImageView
         android:layout_width="match_parent"
@@ -27,16 +27,9 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             app:title="Artikel MindCare"
-            app:titleTextColor="#4F6046"
-            app:subtitleTextColor="#596548">
-
-            <ImageView
-                android:layout_width="32dp"
-                android:layout_height="32dp"
-                android:layout_gravity="end|center_vertical"
-                android:layout_marginEnd="16dp"
-                android:contentDescription="Logo MindCare"
-                android:src="@drawable/logoapp" />
+            android:background="@color/kuning"
+            app:titleTextColor="@color/black"
+            app:subtitleTextColor="@color/black">
 
         </androidx.appcompat.widget.Toolbar>
 

@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <!-- WALLPAPER MINDCARE -->
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -24,7 +23,6 @@
             android:orientation="vertical"
             android:padding="20dp">
 
-            <!-- HEADER -->
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -71,7 +69,6 @@
 
             </com.google.android.material.card.MaterialCardView>
 
-            <!-- TIPS 1 -->
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -110,7 +107,6 @@
 
             </com.google.android.material.card.MaterialCardView>
 
-            <!-- TIPS 2 -->
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -149,7 +145,6 @@
 
             </com.google.android.material.card.MaterialCardView>
 
-            <!-- TIPS 3 -->
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -188,7 +183,6 @@
 
             </com.google.android.material.card.MaterialCardView>
 
-            <!-- TIPS 4 -->
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -227,7 +221,6 @@
 
             </com.google.android.material.card.MaterialCardView>
 
-            <!-- FOOTER -->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools" android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".pertemuan5.ArtikelActivity">
+    tools:context=".Home.pertemuan5.ArtikelActivity">
 
     <ImageView
         android:layout_width="match_parent"
@@ -25,16 +25,9 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
+            android:background="@color/kuning"
             app:title="Artikel Kesehatan Mental"
-            app:titleTextColor="#4F6046">
-
-            <ImageView
-                android:layout_width="32dp"
-                android:layout_height="32dp"
-                android:layout_gravity="end|center_vertical"
-                android:layout_marginEnd="14dp"
-                android:contentDescription="Logo MindCare"
-                android:src="@drawable/logoapp" />
+            app:titleTextColor="@color/black">
 
         </androidx.appcompat.widget.Toolbar>
 

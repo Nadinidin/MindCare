@@ -14,17 +14,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Nadini_3TIB">
 
-        <!-- SplashScreen -->
+        <!-- SplashScreen sebagai halaman pertama -->
         <activity
             android:name=".SplashScreen"
             android:exported="true"
             android:windowSoftInputMode="adjustResize">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
 
         <!-- Login -->
@@ -33,30 +31,36 @@
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
 
-        <!-- Halaman Utama -->
+        <!-- Halaman utama: Bottom Navigation MindCare -->
         <activity
-            android:name=".MainActivity"
+            android:name=".BaseActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
 
         <!-- Pertemuan 5 -->
         <activity
-            android:name=".pertemuan5.LimaActivity"
+            android:name=".Home.pertemuan5.LimaActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
 
         <activity
-            android:name=".pertemuan5.WebViewActivity"
+            android:name=".Home.pertemuan5.WebViewActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
 
         <activity
-            android:name=".pertemuan5.ArtikelActivity"
+            android:name=".Home.pertemuan5.ArtikelActivity"
             android:exported="false" />
 
-        <!-- Pertemuan 6: Activity untuk 3 Fragment -->
+        <!-- Pertemuan 6 -->
         <activity
-            android:name=".pertemuan6.SixthActivity"
+            android:name=".Home.pertemuan6.SixthActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- Detail pesan -->
+        <activity
+            android:name=".Message.MessageActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
 

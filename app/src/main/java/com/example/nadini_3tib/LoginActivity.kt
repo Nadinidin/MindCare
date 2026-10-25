@@ -1,4 +1,3 @@
-
 package com.example.nadini_3tib
 
 import android.content.Intent
@@ -54,11 +53,10 @@ class LoginActivity : AppCompatActivity() {
                     Toast.LENGTH_SHORT
                 ).show()
 
-                startActivity(Intent(this, MainActivity::class.java))
+                startActivity(Intent(this, BaseActivity::class.java))
                 finish()
 
             } else {
-
                 AlertDialog.Builder(this)
                     .setTitle("Login Gagal")
                     .setMessage(

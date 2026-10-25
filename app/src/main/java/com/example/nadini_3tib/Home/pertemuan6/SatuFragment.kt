@@ -1,4 +1,4 @@
-package com.example.nadini_3tib.pertemuan6
+package com.example.nadini_3tib.Home.pertemuan6
 
 import android.content.Context
 import android.os.Bundle
@@ -23,7 +23,6 @@ class SatuFragment : Fragment() {
             false
         )
 
-        // Mengambil username dari SharedPreferences
         val sharedPref = requireActivity().getSharedPreferences(
             "user_pref",
             Context.MODE_PRIVATE
@@ -34,7 +33,6 @@ class SatuFragment : Fragment() {
             "Pengguna"
         ) ?: "Pengguna"
 
-        // Menampilkan username pada Fragment
         val txtUsername = view.findViewById<TextView>(
             R.id.txtUsernameFragment
         )

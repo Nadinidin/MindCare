@@ -1,4 +1,4 @@
-package com.example.nadini_3tib.pertemuan5
+package com.example.nadini_3tib.Home.pertemuan5
 
 import android.graphics.Color
 import android.os.Bundle
@@ -37,7 +37,6 @@ class WebViewActivity : AppCompatActivity() {
             insets
         }
 
-        // Mengatur toolbar
         setSupportActionBar(binding.toolbar)
 
         supportActionBar?.apply {
@@ -47,7 +46,6 @@ class WebViewActivity : AppCompatActivity() {
             setHomeAsUpIndicator(R.drawable.ic_arrow_back)
         }
 
-        // Warna tulisan dan ikon toolbar
         binding.toolbar.setTitleTextColor(Color.BLACK)
         binding.toolbar.navigationIcon?.setTint(Color.BLACK)
 
@@ -56,7 +54,6 @@ class WebViewActivity : AppCompatActivity() {
             finish()
         }
 
-        // Menampilkan artikel di WebView
         binding.webView.webViewClient = WebViewClient()
         binding.webView.settings.javaScriptEnabled = true
 

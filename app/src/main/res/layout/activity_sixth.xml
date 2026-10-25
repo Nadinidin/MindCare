@@ -22,9 +22,9 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="#DDE8EDDF"
-            app:titleTextColor="#4F6046"
-            app:subtitleTextColor="#596548" />
+            android:background="@color/kuning"
+            app:titleTextColor="@color/black"
+            app:subtitleTextColor="@color/black" />
 
         <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
