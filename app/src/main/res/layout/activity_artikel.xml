@@ -18,15 +18,16 @@
         android:id="@+id/appBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#DDE8EDDF"
-        app:elevation="2dp">
+        android:background="#F8F6E1"
+        app:elevation="0dp">
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="@color/kuning"
+            android:background="#F8F6E1"
             app:title="Artikel Kesehatan Mental"
+            android:textStyle="bold"
             app:titleTextColor="@color/black">
 
         </androidx.appcompat.widget.Toolbar>
@@ -43,14 +44,24 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:paddingStart="18dp"
-            android:paddingEnd="18dp"
-            android:paddingTop="20dp"
             android:paddingBottom="32dp">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/bg_header_wave" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="18dp"
+            android:paddingEnd="18dp">
 
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
                 app:cardBackgroundColor="#BFFFFFFF"
                 app:cardCornerRadius="26dp"
                 app:cardElevation="5dp"
@@ -122,7 +133,87 @@
                 android:textColor="#596548"
                 android:textSize="13sp" />
 
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chipGroupFilter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="18dp"
+                app:singleSelection="true"
+                app:selectionRequired="true"
+                app:chipSpacingHorizontal="8dp"
+                app:chipSpacingVertical="6dp">
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipSemua"
+                    style="@style/Widget.MaterialComponents.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checkable="true"
+                    android:checked="true"
+                    android:text="Semua"
+                    android:textColor="#596548"
+                    app:chipBackgroundColor="#FAF8E3"
+                    app:checkedIconVisible="false" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipPerawatan"
+                    style="@style/Widget.MaterialComponents.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checkable="true"
+                    android:text="Perawatan Diri"
+                    android:textColor="#596548"
+                    app:chipBackgroundColor="#FAF8E3"
+                    app:checkedIconVisible="false" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipMental"
+                    style="@style/Widget.MaterialComponents.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checkable="true"
+                    android:text="Kesehatan Mental"
+                    android:textColor="#596548"
+                    app:chipBackgroundColor="#FAF8E3"
+                    app:checkedIconVisible="false" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipStres"
+                    style="@style/Widget.MaterialComponents.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checkable="true"
+                    android:text="Stres"
+                    android:textColor="#596548"
+                    app:chipBackgroundColor="#FAF8E3"
+                    app:checkedIconVisible="false" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipKecemasan"
+                    style="@style/Widget.MaterialComponents.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checkable="true"
+                    android:text="Kecemasan"
+                    android:textColor="#596548"
+                    app:chipBackgroundColor="#FAF8E3"
+                    app:checkedIconVisible="false" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipRemaja"
+                    style="@style/Widget.MaterialComponents.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checkable="true"
+                    android:text="Remaja"
+                    android:textColor="#596548"
+                    app:chipBackgroundColor="#FAF8E3"
+                    app:checkedIconVisible="false" />
+
+            </com.google.android.material.chip.ChipGroup>
+
             <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardArtikel1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="14dp"
@@ -209,6 +300,7 @@
             </com.google.android.material.card.MaterialCardView>
 
             <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardArtikel2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="14dp"
@@ -295,6 +387,7 @@
             </com.google.android.material.card.MaterialCardView>
 
             <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardArtikel3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="14dp"
@@ -381,6 +474,7 @@
             </com.google.android.material.card.MaterialCardView>
 
             <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardArtikel4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="14dp"
@@ -467,6 +561,7 @@
             </com.google.android.material.card.MaterialCardView>
 
             <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardArtikel5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="14dp"
@@ -563,6 +658,7 @@
                 android:textSize="13sp"
                 android:textStyle="bold" />
 
+            </LinearLayout>
         </LinearLayout>
 
     </androidx.core.widget.NestedScrollView>

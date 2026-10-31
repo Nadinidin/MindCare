@@ -21,6 +21,7 @@ class SplashScreen : AppCompatActivity() {
         ViewCompat.setOnApplyWindowInsetsListener(
             findViewById(R.id.main)
         ) { v, insets ->
+
             val systemBars = insets.getInsets(
                 WindowInsetsCompat.Type.systemBars()
             )
@@ -31,6 +32,7 @@ class SplashScreen : AppCompatActivity() {
                 systemBars.right,
                 systemBars.bottom
             )
+
             insets
         }
 
@@ -40,19 +42,20 @@ class SplashScreen : AppCompatActivity() {
         )
 
         val isLogin = sharedPref.getBoolean("isLogin", false)
+        val tutorialSeen = sharedPref.getBoolean("tutorial_seen", false)
 
         lifecycleScope.launch {
             delay(2000)
 
-            if (isLogin) {
-                startActivity(
-                    Intent(this@SplashScreen, BaseActivity::class.java)
-                )
-            } else {
-                startActivity(
-                    Intent(this@SplashScreen, LoginActivity::class.java)
-                )
+            val destination = when {
+                isLogin -> BaseActivity::class.java
+                !tutorialSeen -> TutorialActivity::class.java
+                else -> LoginActivity::class.java
             }
+
+            startActivity(
+                Intent(this@SplashScreen, destination)
+            )
 
             finish()
         }

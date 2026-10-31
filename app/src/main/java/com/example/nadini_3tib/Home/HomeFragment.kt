@@ -13,6 +13,7 @@ import com.example.nadini_3tib.Home.pertemuan5.LimaActivity
 import com.example.nadini_3tib.LoginActivity
 import com.example.nadini_3tib.databinding.FragmentHomeBinding
 import com.google.android.material.snackbar.Snackbar
+import com.example.nadini_3tib.Home.pertemuan6.SixthActivity
 
 class HomeFragment : Fragment() {
 
@@ -70,6 +71,11 @@ class HomeFragment : Fragment() {
             )
         }
 
+        binding.btnSixth.setOnClickListener {
+            startActivity(
+                Intent(requireContext(), SixthActivity::class.java)
+            )
+        }
     }
 
     override fun onDestroyView() {

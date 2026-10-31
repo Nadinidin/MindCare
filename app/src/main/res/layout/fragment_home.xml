@@ -125,6 +125,8 @@
             </com.google.android.material.card.MaterialCardView>
 
             <!-- TENAGA PROFESIONAL -->
+
+            <!-- TENAGA PROFESIONAL -->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -162,17 +164,19 @@
                         android:textSize="15sp"
                         android:textStyle="bold" />
 
-                    <LinearLayout
+                    <androidx.gridlayout.widget.GridLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="16dp"
-                        android:orientation="horizontal">
+                        app:columnCount="2"
+                        app:alignmentMode="alignMargins"
+                        app:useDefaultMargins="false">
 
                         <com.google.android.material.card.MaterialCardView
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_marginEnd="6dp"
-                            android:layout_weight="1"
+                            app:layout_columnWeight="1"
                             app:cardBackgroundColor="#DDF8F6E1"
                             app:cardCornerRadius="18dp"
                             app:cardElevation="0dp">
@@ -205,13 +209,17 @@
                                     app:cornerRadius="12dp" />
 
                             </LinearLayout>
+
                         </com.google.android.material.card.MaterialCardView>
 
+                        <!-- PSIKOLOG -->
                         <com.google.android.material.card.MaterialCardView
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="6dp"
-                            android:layout_weight="1"
+                            app:layout_column="1"
+                            app:layout_columnWeight="1"
+                            app:layout_gravity="fill"
                             app:cardBackgroundColor="#DDF8F6E1"
                             app:cardCornerRadius="18dp"
                             app:cardElevation="0dp">
@@ -244,11 +252,15 @@
                                     app:cornerRadius="12dp" />
 
                             </LinearLayout>
+
                         </com.google.android.material.card.MaterialCardView>
 
-                    </LinearLayout>
+                    </androidx.gridlayout.widget.GridLayout>
+
                 </LinearLayout>
+
             </com.google.android.material.card.MaterialCardView>
+
 
             <!-- JELAJAHI MINDCARE -->
             <TextView
@@ -332,6 +344,46 @@
                         android:layout_marginStart="12dp"
                         android:layout_weight="1"
                         android:text="Tentang MindCare"
+                        android:textAllCaps="false"
+                        android:textColor="#4F6046"
+                        app:backgroundTint="#DDF8F6E1"
+                        app:cornerRadius="14dp" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                app:cardBackgroundColor="#BFFFFFFF"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="4dp"
+                app:strokeColor="#E6FFFFFF"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="14dp">
+
+                    <ImageView
+                        android:layout_width="38dp"
+                        android:layout_height="38dp"
+                        android:contentDescription="Ikon Ruang Sehat"
+                        android:src="@android:drawable/ic_menu_compass"
+                        app:tint="@color/hijau" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnSixth"
+                        android:layout_width="0dp"
+                        android:layout_height="52dp"
+                        android:layout_marginStart="12dp"
+                        android:layout_weight="1"
+                        android:text="Ruang Sehat MindCare"
                         android:textAllCaps="false"
                         android:textColor="#4F6046"
                         app:backgroundTint="#DDF8F6E1"

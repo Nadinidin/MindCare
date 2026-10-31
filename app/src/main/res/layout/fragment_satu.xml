@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <!-- Wallpaper -->
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -12,61 +13,222 @@
         android:scaleType="centerCrop"
         android:contentDescription="Wallpaper MindCare" />
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:orientation="vertical"
-        android:padding="20dp">
+        android:layout_height="match_parent"
+        android:fillViewport="true">
 
-        <com.google.android.material.card.MaterialCardView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:cardBackgroundColor="#CFFFFFFF"
-            app:cardCornerRadius="26dp"
-            app:cardElevation="5dp"
-            app:strokeColor="#E6FFFFFF"
-            app:strokeWidth="1dp">
+            android:orientation="vertical"
+            android:padding="18dp">
 
-            <LinearLayout
+            <!-- Header -->
+            <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:gravity="center"
-                android:padding="28dp">
+                app:cardBackgroundColor="#CFFFFFFF"
+                app:cardCornerRadius="24dp"
+                app:cardElevation="4dp"
+                app:strokeColor="#E6FFFFFF"
+                app:strokeWidth="1dp">
 
-                <ImageView
-                    android:layout_width="85dp"
-                    android:layout_height="85dp"
-                    android:src="@drawable/logoapp"
-                    android:contentDescription="Logo MindCare" />
-
-                <TextView
-                    android:id="@+id/txtUsernameFragment"
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:fontFamily="@font/font1"
+                    android:orientation="vertical"
                     android:gravity="center"
-                    android:text="Halo, Pengguna!"
-                    android:textColor="#4F6046"
-                    android:textSize="24sp"
-                    android:textStyle="bold" />
+                    android:padding="22dp">
 
-                <TextView
+                    <ImageView
+                        android:layout_width="65dp"
+                        android:layout_height="65dp"
+                        android:src="@drawable/logoapp"
+                        android:contentDescription="Logo MindCare" />
+
+                    <TextView
+                        android:id="@+id/txtUsernameFragment"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:fontFamily="@font/font1"
+                        android:gravity="center"
+                        android:text="Halo, Pengguna!"
+                        android:textColor="#4F6046"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/font1"
+                        android:gravity="center"
+                        android:text="Tips Kesehatan Mental"
+                        android:textColor="#4F6046"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:fontFamily="@font/font1"
+                        android:gravity="center"
+                        android:text="Langkah kecil untuk menjaga pikiran dan perasaanmu."
+                        android:textColor="#596548"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Tips 1 -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                app:cardBackgroundColor="#CFFFFFFF"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="3dp">
+
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
-                    android:fontFamily="@font/font1"
-                    android:gravity="center"
-                    android:text="Selamat datang di MindCare. Yuk, jaga kesehatan mentalmu setiap hari!"
-                    android:textColor="#596548"
-                    android:textSize="14sp" />
+                    android:orientation="vertical"
+                    android:padding="18dp">
 
-            </LinearLayout>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="01. Istirahat yang Cukup"
+                        android:textColor="#4F6046"
+                        android:textSize="17sp"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/font1" />
 
-        </com.google.android.material.card.MaterialCardView>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7dp"
+                        android:text="Berikan waktu bagi tubuh dan pikiran untuk beristirahat. Tidur yang cukup dapat membantu menjaga suasana hati dan konsentrasi."
+                        android:textColor="#596548"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/font1" />
 
-    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Tips 2 -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                app:cardBackgroundColor="#CFFFFFFF"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="3dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="18dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="02. Kenali Perasaanmu"
+                        android:textColor="#4F6046"
+                        android:textSize="17sp"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/font1" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7dp"
+                        android:text="Cobalah memahami apa yang sedang kamu rasakan. Tidak apa-apa merasa sedih, kecewa, atau lelah."
+                        android:textColor="#596548"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/font1" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Tips 3 -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                app:cardBackgroundColor="#CFFFFFFF"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="3dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="18dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="03. Cerita kepada Orang Terpercaya"
+                        android:textColor="#4F6046"
+                        android:textSize="17sp"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/font1" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7dp"
+                        android:text="Jangan ragu untuk berbagi cerita dengan keluarga, teman, atau orang yang kamu percaya ketika sedang menghadapi masalah."
+                        android:textColor="#596548"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/font1" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Tips 4 -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="20dp"
+                app:cardBackgroundColor="#CFFFFFFF"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="3dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="18dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="04. Luangkan Waktu untuk Diri Sendiri"
+                        android:textColor="#4F6046"
+                        android:textSize="17sp"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/font1" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7dp"
+                        android:text="Lakukan kegiatan yang kamu sukai, seperti membaca buku, mendengarkan musik, atau berjalan santai."
+                        android:textColor="#596548"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/font1" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+    </ScrollView>
 
 </FrameLayout>

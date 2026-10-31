@@ -9,11 +9,14 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/pp2"
+        android:contentDescription="Wallpaper MindCare"
         android:scaleType="centerCrop"
-        android:contentDescription="Wallpaper MindCare" />
+        android:src="@drawable/pp2"
+        app:layout_anchor="@+id/linearLayout"
+        app:layout_anchorGravity="center" />
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
@@ -23,8 +26,13 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="@color/kuning"
-            app:titleTextColor="@color/black"
-            app:subtitleTextColor="@color/black" />
+            app:subtitleTextColor="@color/black"
+            app:titleTextColor="@color/black" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/bg_header_wave" />
 
         <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
@@ -46,36 +54,36 @@
                     android:id="@+id/btnFragment1"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
                     android:layout_marginEnd="4dp"
-                    android:text="Profil"
+                    android:layout_weight="1"
+                    android:text="Tips Mental"
                     android:textAllCaps="false"
-                    android:textSize="12sp"
-                    app:cornerRadius="14dp"
-                    app:backgroundTint="@color/hijau" />
+                    android:textSize="11sp"
+                    app:backgroundTint="@color/hijau"
+                    app:cornerRadius="14dp" />
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/btnFragment2"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
                     android:layout_marginEnd="4dp"
-                    android:text="Tips"
+                    android:layout_weight="1"
+                    android:text="Self-Care"
                     android:textAllCaps="false"
-                    android:textSize="12sp"
-                    app:cornerRadius="14dp"
-                    app:backgroundTint="@color/hijau" />
+                    android:textSize="11sp"
+                    app:backgroundTint="@color/hijau"
+                    app:cornerRadius="14dp" />
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/btnFragment3"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Self-Care"
+                    android:text="Kenali Emosi"
                     android:textAllCaps="false"
-                    android:textSize="12sp"
-                    app:cornerRadius="14dp"
-                    app:backgroundTint="@color/hijau" />
+                    android:textSize="11sp"
+                    app:backgroundTint="@color/hijau"
+                    app:cornerRadius="14dp" />
 
             </LinearLayout>
 

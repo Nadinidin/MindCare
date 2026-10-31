@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <!-- Wallpaper MindCare -->
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -23,214 +24,354 @@
             android:orientation="vertical"
             android:padding="20dp">
 
-            <com.google.android.material.card.MaterialCardView
-                android:layout_width="match_parent"
+            <!-- Judul halaman tanpa header card -->
+            <TextView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:cardBackgroundColor="#CFFFFFFF"
-                app:cardCornerRadius="26dp"
-                app:cardElevation="5dp"
-                app:strokeColor="#E6FFFFFF"
-                app:strokeWidth="1dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:gravity="center"
-                    android:padding="24dp">
-
-                    <ImageView
-                        android:layout_width="75dp"
-                        android:layout_height="75dp"
-                        android:src="@drawable/logoapp"
-                        android:contentDescription="Logo MindCare" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="14dp"
-                        android:fontFamily="@font/font1"
-                        android:gravity="center"
-                        android:text="Tips Kesehatan Mental"
-                        android:textColor="#4F6046"
-                        android:textSize="23sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:gravity="center"
-                        android:text="Langkah kecil untuk menjaga pikiran dan perasaanmu."
-                        android:textColor="#596548"
-                        android:textSize="14sp" />
-
-                </LinearLayout>
-
-            </com.google.android.material.card.MaterialCardView>
-
-            <com.google.android.material.card.MaterialCardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                app:cardBackgroundColor="#CFFFFFFF"
-                app:cardCornerRadius="22dp"
-                app:cardElevation="3dp"
-                app:strokeColor="#E6FFFFFF"
-                app:strokeWidth="1dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:padding="20dp">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/font1"
-                        android:text="01  Istirahat yang Cukup"
-                        android:textColor="#4F6046"
-                        android:textSize="17sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:lineSpacingExtra="4dp"
-                        android:text="Usahakan tidur secara teratur agar tubuh dan pikiran memiliki waktu untuk beristirahat."
-                        android:textColor="#596548"
-                        android:textSize="14sp" />
-
-                </LinearLayout>
-
-            </com.google.android.material.card.MaterialCardView>
-
-            <com.google.android.material.card.MaterialCardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="14dp"
-                app:cardBackgroundColor="#CCF8F6E1"
-                app:cardCornerRadius="22dp"
-                app:cardElevation="3dp"
-                app:strokeColor="#E6FFFFFF"
-                app:strokeWidth="1dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:padding="20dp">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/font1"
-                        android:text="02  Kenali Perasaanmu"
-                        android:textColor="#4F6046"
-                        android:textSize="17sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:lineSpacingExtra="4dp"
-                        android:text="Luangkan waktu untuk memahami apa yang sedang kamu rasakan tanpa menghakimi diri sendiri."
-                        android:textColor="#596548"
-                        android:textSize="14sp" />
-
-                </LinearLayout>
-
-            </com.google.android.material.card.MaterialCardView>
-
-            <com.google.android.material.card.MaterialCardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="14dp"
-                app:cardBackgroundColor="#CFFFFFFF"
-                app:cardCornerRadius="22dp"
-                app:cardElevation="3dp"
-                app:strokeColor="#E6FFFFFF"
-                app:strokeWidth="1dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:padding="20dp">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/font1"
-                        android:text="03  Cerita kepada Orang Terpercaya"
-                        android:textColor="#4F6046"
-                        android:textSize="17sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:lineSpacingExtra="4dp"
-                        android:text="Berbagi cerita dengan orang yang kamu percaya dapat membantu mengurangi beban pikiran."
-                        android:textColor="#596548"
-                        android:textSize="14sp" />
-
-                </LinearLayout>
-
-            </com.google.android.material.card.MaterialCardView>
-
-            <com.google.android.material.card.MaterialCardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="14dp"
-                app:cardBackgroundColor="#CCF8F6E1"
-                app:cardCornerRadius="22dp"
-                app:cardElevation="3dp"
-                app:strokeColor="#E6FFFFFF"
-                app:strokeWidth="1dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:padding="20dp">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/font1"
-                        android:text="04  Luangkan Waktu untuk Diri Sendiri"
-                        android:textColor="#4F6046"
-                        android:textSize="17sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:lineSpacingExtra="4dp"
-                        android:text="Lakukan aktivitas yang kamu sukai, seperti membaca, mendengarkan musik, atau berjalan santai."
-                        android:textColor="#596548"
-                        android:textSize="14sp" />
-
-                </LinearLayout>
-
-            </com.google.android.material.card.MaterialCardView>
+                android:text="MINDCARE  /  SELF-CARE"
+                android:textColor="#7C8466"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.08"
+                android:fontFamily="@font/font1" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="24dp"
-                android:gravity="center"
-                android:fontFamily="@font/font1"
-                android:text="MindCare • Your Mind Matters"
+                android:layout_marginTop="12dp"
+                android:text="Waktunya Merawat Diri"
                 android:textColor="#4F6046"
+                android:textSize="27sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/font1" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="22dp"
+                android:text="Hal sederhana yang kamu lakukan hari ini juga berarti untuk dirimu."
+                android:textColor="#596548"
+                android:textSize="14sp"
+                android:lineSpacingExtra="4dp"
+                android:fontFamily="@font/font1" />
+
+            <!-- Motivasi singkat -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="#CCF8F6E1"
+                app:cardCornerRadius="24dp"
+                app:cardElevation="3dp"
+                app:strokeColor="#E6FFFFFF"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="♡  REMINDER FOR YOU"
+                        android:textColor="#7C8466"
+                        android:textSize="11sp"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/font1" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Kamu juga pantas mendapatkan perhatian dan kasih sayang dari dirimu sendiri."
+                        android:textColor="#4F6046"
+                        android:textSize="17sp"
+                        android:textStyle="bold"
+                        android:lineSpacingExtra="5dp"
+                        android:fontFamily="@font/font1" />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Judul aktivitas -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="26dp"
+                android:text="Rutinitas Kecil Hari Ini"
+                android:textColor="#4F6046"
+                android:textSize="19sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/font1" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="14dp"
+                android:text="Pilih waktu yang nyaman untuk dirimu."
+                android:textColor="#596548"
                 android:textSize="13sp"
-                android:textStyle="bold" />
+                android:fontFamily="@font/font1" />
+
+            <!-- Satu card berisi daftar aktivitas -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="#DFFFFFFF"
+                app:cardCornerRadius="24dp"
+                app:cardElevation="4dp"
+                app:strokeColor="#E6FFFFFF"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="18dp">
+
+                    <!-- Aktivitas pagi -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingVertical="10dp">
+
+                        <TextView
+                            android:layout_width="52dp"
+                            android:layout_height="52dp"
+                            android:gravity="center"
+                            android:text="🌿"
+                            android:textSize="25sp"
+                            android:background="#EAF0DE" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="14dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="PAGI"
+                                android:textColor="#89916E"
+                                android:textSize="10sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="3dp"
+                                android:text="Latihan Pernapasan"
+                                android:textColor="#4F6046"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                android:fontFamily="@font/font1" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:text="Ambil napas perlahan dan tenangkan pikiran."
+                                android:textColor="#596548"
+                                android:textSize="12sp"
+                                android:fontFamily="@font/font1" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#DDE2D1" />
+
+                    <!-- Aktivitas siang -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingVertical="14dp">
+
+                        <TextView
+                            android:layout_width="52dp"
+                            android:layout_height="52dp"
+                            android:gravity="center"
+                            android:text="📖"
+                            android:textSize="25sp"
+                            android:background="#F8F0DF" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="14dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="SIANG"
+                                android:textColor="#89916E"
+                                android:textSize="10sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="3dp"
+                                android:text="Menulis Jurnal Harian"
+                                android:textColor="#4F6046"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                android:fontFamily="@font/font1" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:text="Tuliskan perasaan dan hal yang kamu syukuri."
+                                android:textColor="#596548"
+                                android:textSize="12sp"
+                                android:fontFamily="@font/font1" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#DDE2D1" />
+
+                    <!-- Aktivitas sore -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingVertical="14dp">
+
+                        <TextView
+                            android:layout_width="52dp"
+                            android:layout_height="52dp"
+                            android:gravity="center"
+                            android:text="🌤️"
+                            android:textSize="25sp"
+                            android:background="#F4E8EA" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="14dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="SORE"
+                                android:textColor="#89916E"
+                                android:textSize="10sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="3dp"
+                                android:text="Istirahat dari Layar"
+                                android:textColor="#4F6046"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                android:fontFamily="@font/font1" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:text="Jauhkan ponsel sejenak dan nikmati sekitar."
+                                android:textColor="#596548"
+                                android:textSize="12sp"
+                                android:fontFamily="@font/font1" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#DDE2D1" />
+
+                    <!-- Aktivitas malam -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingVertical="14dp">
+
+                        <TextView
+                            android:layout_width="52dp"
+                            android:layout_height="52dp"
+                            android:gravity="center"
+                            android:text="🌙"
+                            android:textSize="25sp"
+                            android:background="#EAE8F2" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="14dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="MALAM"
+                                android:textColor="#89916E"
+                                android:textSize="10sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="3dp"
+                                android:text="Lakukan Hal Menyenangkan"
+                                android:textColor="#4F6046"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                android:fontFamily="@font/font1" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:text="Nikmati hobi atau dengarkan musik favorit."
+                                android:textColor="#596548"
+                                android:textSize="12sp"
+                                android:fontFamily="@font/font1" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Penutup -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
+                android:layout_marginBottom="20dp"
+                android:gravity="center"
+                android:text="Mulai dari hal kecil, lakukan dengan penuh kasih. ♡"
+                android:textColor="#596548"
+                android:textSize="13sp"
+                android:textStyle="italic"
+                android:fontFamily="@font/font1" />
 
         </LinearLayout>
 

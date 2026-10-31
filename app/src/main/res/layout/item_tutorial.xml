@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="24dp">
+    <TextView
+        android:id="@+id/txtIllustration"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:gravity="center"
+        android:text="🌿"
+        android:textSize="110sp" />
+    <TextView
+        android:id="@+id/txtTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:fontFamily="@font/font1"
+        android:gravity="center"
+        android:text="Welcome to MindCare"
+        android:textColor="#4F6046"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txtDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:fontFamily="@font/font1"
+        android:gravity="center"
+        android:lineSpacingExtra="6dp"
+        android:text="Ruang aman untuk mengenal dan menjaga kesehatan mentalmu."
+        android:textColor="#66675B"
+        android:textSize="15sp" />
+
+</LinearLayout>

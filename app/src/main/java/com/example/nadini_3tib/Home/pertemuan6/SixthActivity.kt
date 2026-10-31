@@ -20,6 +20,10 @@ class SixthActivity : AppCompatActivity() {
         binding = ActivitySixthBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        binding.btnFragment1.text = "Tips Mental"
+        binding.btnFragment2.text = "Self-Care"
+        binding.btnFragment3.text = "Kenali Emosi"
+
         ViewCompat.setOnApplyWindowInsetsListener(binding.root) { v, insets ->
             val systemBars = insets.getInsets(
                 WindowInsetsCompat.Type.systemBars()

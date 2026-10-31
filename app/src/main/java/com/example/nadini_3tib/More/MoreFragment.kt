@@ -53,6 +53,8 @@ class MoreFragment : Fragment() {
         )
 
         binding.listViewItems.adapter = adapter
+        binding.listViewItems.visibility = View.VISIBLE
+        binding.listViewItems.setBackgroundColor(android.graphics.Color.TRANSPARENT)
 
         binding.listViewItems.setOnItemClickListener { _, _, position, _ ->
 
