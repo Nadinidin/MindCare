@@ -1,4 +1,4 @@
-package com.example.nadini_3tib
+package com.example.nadini_3tib.tutorial
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

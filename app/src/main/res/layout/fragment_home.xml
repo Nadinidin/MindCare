@@ -262,6 +262,381 @@
             </com.google.android.material.card.MaterialCardView>
 
 
+
+            <!-- AMBIL TES KESEHATAN MENTAL -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:fontFamily="@font/font1"
+                android:text="Ambil Tes Kesehatan Mental"
+                android:textColor="#4F6046"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/font1"
+                android:text="Pemeriksaan awal. Kenali kondisi dirimu."
+                android:textColor="#596548"
+                android:textSize="14sp" />
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:clipToPadding="false"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <!-- TES KESEHATAN MENTAL -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="230dp"
+                        android:layout_height="360dp"
+                        android:layout_marginEnd="12dp"
+                        app:cardBackgroundColor="#FFFFFF"
+                        app:cardCornerRadius="18dp"
+                        app:cardElevation="4dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:padding="16dp">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="115dp"
+                                android:background="#EAEAF8"
+                                android:gravity="center"
+                                android:text="🧠"
+                                android:textSize="65sp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="48dp"
+                                android:layout_marginTop="14dp"
+                                android:fontFamily="@font/font1"
+                                android:gravity="center_vertical"
+                                android:maxLines="2"
+                                android:ellipsize="end"
+                                android:text="Tes Kesehatan Mental"
+                                android:textColor="#333333"
+                                android:textSize="17sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="54dp"
+                                android:layout_marginTop="8dp"
+                                android:fontFamily="@font/font1"
+                                android:gravity="top"
+                                android:maxLines="3"
+                                android:ellipsize="end"
+                                android:text="Kenali kondisi dan kesejahteraan mentalmu."
+                                android:textColor="#666666"
+                                android:textSize="13sp" />
+
+                            <Space
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1" />
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/btnTesMental"
+                                android:layout_width="wrap_content"
+                                android:layout_height="44dp"
+                                android:minHeight="0dp"
+                                android:text="Ambil Tes"
+                                android:textAllCaps="false"
+                                android:textColor="@color/white"
+                                app:backgroundTint="@color/hijau"
+                                app:cornerRadius="10dp" />
+
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <!-- TES PERAWATAN DIRI -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="230dp"
+                        android:layout_height="360dp"
+                        android:layout_marginEnd="12dp"
+                        app:cardBackgroundColor="#FFFFFF"
+                        app:cardCornerRadius="18dp"
+                        app:cardElevation="4dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:padding="16dp">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="115dp"
+                                android:background="#F8EAF0"
+                                android:gravity="center"
+                                android:text="🌷"
+                                android:textSize="65sp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="48dp"
+                                android:layout_marginTop="14dp"
+                                android:fontFamily="@font/font1"
+                                android:gravity="center_vertical"
+                                android:maxLines="2"
+                                android:ellipsize="end"
+                                android:text="Tes Perawatan Diri"
+                                android:textColor="#333333"
+                                android:textSize="17sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="54dp"
+                                android:layout_marginTop="8dp"
+                                android:fontFamily="@font/font1"
+                                android:gravity="top"
+                                android:maxLines="3"
+                                android:ellipsize="end"
+                                android:text="Kenali kebiasaan dalam merawat dirimu."
+                                android:textColor="#666666"
+                                android:textSize="13sp" />
+
+                            <Space
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1" />
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/btnTesPerawatan"
+                                android:layout_width="wrap_content"
+                                android:layout_height="44dp"
+                                android:minHeight="0dp"
+                                android:text="Ambil Tes"
+                                android:textAllCaps="false"
+                                android:textColor="@color/white"
+                                app:backgroundTint="@color/hijau"
+                                app:cornerRadius="10dp" />
+
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <!-- TES STRES -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="230dp"
+                        android:layout_height="360dp"
+                        android:layout_marginEnd="12dp"
+                        app:cardBackgroundColor="#FFFFFF"
+                        app:cardCornerRadius="18dp"
+                        app:cardElevation="4dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:padding="16dp">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="115dp"
+                                android:background="#F8F0E5"
+                                android:gravity="center"
+                                android:text="🌿"
+                                android:textSize="65sp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="48dp"
+                                android:layout_marginTop="14dp"
+                                android:fontFamily="@font/font1"
+                                android:gravity="center_vertical"
+                                android:maxLines="2"
+                                android:ellipsize="end"
+                                android:text="Tes Tingkat Stres"
+                                android:textColor="#333333"
+                                android:textSize="17sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="54dp"
+                                android:layout_marginTop="8dp"
+                                android:fontFamily="@font/font1"
+                                android:gravity="top"
+                                android:maxLines="3"
+                                android:ellipsize="end"
+                                android:text="Kenali tingkat stres yang kamu alami."
+                                android:textColor="#666666"
+                                android:textSize="13sp" />
+
+                            <Space
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1" />
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/btnTesStres"
+                                android:layout_width="wrap_content"
+                                android:layout_height="44dp"
+                                android:minHeight="0dp"
+                                android:text="Ambil Tes"
+                                android:textAllCaps="false"
+                                android:textColor="@color/white"
+                                app:backgroundTint="@color/hijau"
+                                app:cornerRadius="10dp" />
+
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <!-- TES KECEMASAN -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="230dp"
+                        android:layout_height="360dp"
+                        android:layout_marginEnd="12dp"
+                        app:cardBackgroundColor="#FFFFFF"
+                        app:cardCornerRadius="18dp"
+                        app:cardElevation="4dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:padding="16dp">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="115dp"
+                                android:background="#E8EFFB"
+                                android:gravity="center"
+                                android:text="💜"
+                                android:textSize="65sp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="48dp"
+                                android:layout_marginTop="14dp"
+                                android:fontFamily="@font/font1"
+                                android:gravity="center_vertical"
+                                android:maxLines="2"
+                                android:ellipsize="end"
+                                android:text="Tes Gangguan Kecemasan"
+                                android:textColor="#333333"
+                                android:textSize="17sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="54dp"
+                                android:layout_marginTop="8dp"
+                                android:fontFamily="@font/font1"
+                                android:gravity="top"
+                                android:maxLines="3"
+                                android:ellipsize="end"
+                                android:text="Kenali gejala kecemasan yang dirasakan."
+                                android:textColor="#666666"
+                                android:textSize="13sp" />
+
+                            <Space
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1" />
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/btnTesKecemasan"
+                                android:layout_width="wrap_content"
+                                android:layout_height="44dp"
+                                android:minHeight="0dp"
+                                android:text="Ambil Tes"
+                                android:textAllCaps="false"
+                                android:textColor="@color/white"
+                                app:backgroundTint="@color/hijau"
+                                app:cornerRadius="10dp" />
+
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <!-- TES REMAJA -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="230dp"
+                        android:layout_height="360dp"
+                        android:layout_marginEnd="12dp"
+                        app:cardBackgroundColor="#FFFFFF"
+                        app:cardCornerRadius="18dp"
+                        app:cardElevation="4dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:padding="16dp">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="115dp"
+                                android:background="#F2EAF8"
+                                android:gravity="center"
+                                android:text="🌻"
+                                android:textSize="65sp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="48dp"
+                                android:layout_marginTop="14dp"
+                                android:fontFamily="@font/font1"
+                                android:gravity="center_vertical"
+                                android:maxLines="2"
+                                android:ellipsize="end"
+                                android:text="Tes Kesehatan Mental Remaja"
+                                android:textColor="#333333"
+                                android:textSize="17sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="54dp"
+                                android:layout_marginTop="8dp"
+                                android:fontFamily="@font/font1"
+                                android:gravity="top"
+                                android:maxLines="3"
+                                android:ellipsize="end"
+                                android:text="Kenali kondisi emosional pada masa remaja."
+                                android:textColor="#666666"
+                                android:textSize="13sp" />
+
+                            <Space
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1" />
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/btnTesRemaja"
+                                android:layout_width="wrap_content"
+                                android:layout_height="44dp"
+                                android:minHeight="0dp"
+                                android:text="Ambil Tes"
+                                android:textAllCaps="false"
+                                android:textColor="@color/white"
+                                app:backgroundTint="@color/hijau"
+                                app:cornerRadius="10dp" />
+
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                </LinearLayout>
+            </HorizontalScrollView>
+            <!-- AKHIR AMBIL TES KESEHATAN MENTAL -->
+
+
+
+
             <!-- JELAJAHI MINDCARE -->
             <TextView
                 android:layout_width="match_parent"

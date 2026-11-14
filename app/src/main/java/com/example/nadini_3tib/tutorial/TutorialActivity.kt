@@ -1,4 +1,4 @@
-package com.example.nadini_3tib
+package com.example.nadini_3tib.tutorial
 
 import android.content.Intent
 import android.os.Bundle
@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager2.widget.ViewPager2
 import com.example.nadini_3tib.databinding.ActivityTutorialBinding
 import android.view.View
+import com.example.nadini_3tib.LoginActivity
 
 class TutorialActivity : AppCompatActivity() {
     private lateinit var binding: ActivityTutorialBinding

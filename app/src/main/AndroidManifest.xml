@@ -40,20 +40,20 @@
 
         <!-- Pertemuan 5 -->
         <activity
-            android:name=".Home.pertemuan5.LimaActivity"
+            android:name=".Home.HalArtikel.LimaActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".Home.pertemuan5.WebViewActivity"
+            android:name=".Home.HalArtikel.WebViewActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".Home.pertemuan5.ArtikelActivity"
+            android:name=".Home.HalArtikel.ArtikelActivity"
             android:exported="false" />
 
         <!-- Pertemuan 6 -->
         <activity
-            android:name=".Home.pertemuan6.SixthActivity"
+            android:name=".Home.ruangsehat.SixthActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
 
@@ -63,7 +63,29 @@
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".TutorialActivity"
+            android:name=".tutorial.TutorialActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".Home.TesKesehatan.TesKesehatanActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".Home.TesKesehatan.PertanyaanTesActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".Home.TesKesehatan.HasilTesActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".Home.TesKesehatan.TesPerawatanActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Home.TesKesehatan.TesLainnyaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Home.TesKesehatan.TesPerkenalanActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
     </application>

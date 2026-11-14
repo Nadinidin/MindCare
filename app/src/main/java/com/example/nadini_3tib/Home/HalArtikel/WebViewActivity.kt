@@ -1,4 +1,4 @@
-package com.example.nadini_3tib.Home.pertemuan5
+package com.example.nadini_3tib.Home.HalArtikel
 
 import android.graphics.Color
 import android.os.Bundle

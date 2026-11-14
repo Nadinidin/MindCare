@@ -8,7 +8,6 @@
     android:background="@drawable/pp2"
     tools:context=".Message.MessageFragment">
 
-
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBarLayout"
         android:layout_width="match_parent"
@@ -26,9 +25,19 @@
             app:subtitle="Layanan kesehatan mental"
             app:titleTextColor="@color/black"
             app:subtitleTextColor="@color/black"
-            app:layout_scrollFlags="scroll|enterAlways">
+            app:layout_scrollFlags="scroll|enterAlways" />
 
-        </androidx.appcompat.widget.Toolbar>
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabKonsultasi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/kuning"
+            app:tabIndicatorColor="#8A8C6B"
+            app:tabSelectedTextColor="#8A8C6B"
+            app:tabTextColor="#666666"
+            app:tabIndicatorFullWidth="true"
+            app:tabMode="fixed"
+            app:tabGravity="fill" />
 
         <View
             android:layout_width="match_parent"
@@ -37,17 +46,17 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
-
-    <ListView
-        android:id="@+id/listMessageItems"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerMessageItems"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@android:color/transparent"
-        android:divider="@android:color/transparent"
-        android:dividerHeight="0dp"
-        android:paddingStart="12dp"
-        android:paddingEnd="12dp"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="12dp"
         android:clipToPadding="false"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+        android:background="@android:color/transparent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:listitem="@layout/item_message" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

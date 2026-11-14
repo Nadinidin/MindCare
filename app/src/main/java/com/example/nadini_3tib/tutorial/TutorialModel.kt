@@ -1,4 +1,4 @@
-package com.example.nadini_3tib
+package com.example.nadini_3tib.tutorial
 
 data class TutorialModel(
     val illustration: String,

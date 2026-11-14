@@ -3,44 +3,57 @@ package com.example.nadini_3tib.Message
 import android.content.Context
 import android.content.Intent
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import android.widget.ArrayAdapter
+import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.nadini_3tib.databinding.ItemMessageBinding
 
 class MessageAdapter(
-    context: Context,
+    private val context: Context,
     private val messages: List<MessageModel>
-) : ArrayAdapter<MessageModel>(context, 0, messages) {
+) : RecyclerView.Adapter<MessageAdapter.MessageViewHolder>() {
 
-    override fun getView(
-        position: Int,
-        convertView: View?,
-        parent: ViewGroup
-    ): View {
+    class MessageViewHolder(
+        val binding: ItemMessageBinding
+    ) : RecyclerView.ViewHolder(binding.root)
+
+    override fun onCreateViewHolder(
+        parent: ViewGroup,
+        viewType: Int
+    ): MessageViewHolder {
         val binding = ItemMessageBinding.inflate(
-            LayoutInflater.from(context),
+            LayoutInflater.from(parent.context),
             parent,
             false
         )
+        return MessageViewHolder(binding)
+    }
 
+    override fun onBindViewHolder(
+        holder: MessageViewHolder,
+        position: Int
+    ) {
         val data = messages[position]
 
         Glide.with(context)
             .load(data.avatarUrl)
-            .into(binding.avatarImg)
+            .into(holder.binding.avatarImg)
 
-        binding.textSender.text = data.senderName
-        binding.textMessage.text = data.messageText
+        holder.binding.textSender.text = data.senderName
+        holder.binding.textMessage.text = data.messageText
 
-        binding.root.setOnClickListener {
+        holder.binding.textDistance.text =
+            "📍 ${data.distance} • ±${data.travelTime}"
+
+        holder.binding.root.setOnClickListener {
             val intent = Intent(context, MessageActivity::class.java)
             intent.putExtra("SENDER", data.senderName)
             intent.putExtra("PESAN", data.messageText)
             context.startActivity(intent)
         }
+    }
 
-        return binding.root
+    override fun getItemCount(): Int {
+        return messages.size
     }
 }

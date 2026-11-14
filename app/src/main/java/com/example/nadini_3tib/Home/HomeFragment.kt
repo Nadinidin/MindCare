@@ -6,14 +6,16 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
-import com.example.nadini_3tib.Home.pertemuan5.ArtikelActivity
-import com.example.nadini_3tib.Home.pertemuan5.LimaActivity
-import com.example.nadini_3tib.LoginActivity
+import com.example.nadini_3tib.Home.TesKesehatan.TesPerkenalanActivity
+import com.example.nadini_3tib.Home.HalArtikel.ArtikelActivity
+import com.example.nadini_3tib.Home.HalArtikel.LimaActivity
+import com.example.nadini_3tib.Home.ruangsehat.SixthActivity
+import com.example.nadini_3tib.Home.TesKesehatan.TesKesehatanActivity
+import com.example.nadini_3tib.Home.TesKesehatan.TesPerawatanActivity
 import com.example.nadini_3tib.databinding.FragmentHomeBinding
 import com.google.android.material.snackbar.Snackbar
-import com.example.nadini_3tib.Home.pertemuan6.SixthActivity
+import kotlin.jvm.java
 
 class HomeFragment : Fragment() {
 
@@ -25,7 +27,9 @@ class HomeFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentHomeBinding.inflate(inflater, container, false)
+        _binding = FragmentHomeBinding.inflate(
+            inflater, container, false
+        )
         return binding.root
     }
 
@@ -59,6 +63,7 @@ class HomeFragment : Fragment() {
             ).show()
         }
 
+        // Membuka halaman TabLayout Edukasi
         binding.btnArtikel.setOnClickListener {
             startActivity(
                 Intent(requireContext(), ArtikelActivity::class.java)
@@ -76,7 +81,45 @@ class HomeFragment : Fragment() {
                 Intent(requireContext(), SixthActivity::class.java)
             )
         }
+
+        // Tes Kesehatan Mental
+        binding.btnTesMental.setOnClickListener {
+            startActivity(
+                Intent(requireContext(), TesKesehatanActivity::class.java)
+            )
+        }
+
+        binding.btnTesPerawatan.setOnClickListener {
+            startActivity(
+                Intent(requireContext(), TesPerawatanActivity::class.java)
+            )
+        }
+
+// Tes Stres
+        binding.btnTesStres.setOnClickListener {
+            bukaHalamanPengenalan("stres")
+        }
+
+// Tes Kecemasan
+        binding.btnTesKecemasan.setOnClickListener {
+            bukaHalamanPengenalan("kecemasan")
+        }
+
+// Tes Remaja
+        binding.btnTesRemaja.setOnClickListener {
+            bukaHalamanPengenalan("remaja")
+        }
     }
+    private fun bukaHalamanPengenalan(jenis: String) {
+        val intent = Intent(
+            requireContext(),
+            TesPerkenalanActivity::class.java
+        )
+
+        intent.putExtra("jenis_tes", jenis)
+        startActivity(intent)
+    }
+
 
     override fun onDestroyView() {
         super.onDestroyView()

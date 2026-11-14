@@ -1,4 +1,4 @@
-package com.example.nadini_3tib.Home.pertemuan5
+package com.example.nadini_3tib.Home.HalArtikel
 
 import android.content.Intent
 import android.os.Bundle

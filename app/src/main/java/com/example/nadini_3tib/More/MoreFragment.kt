@@ -34,7 +34,11 @@ class MoreFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentMoreBinding.inflate(inflater, container, false)
+        _binding = FragmentMoreBinding.inflate(
+            inflater,
+            container,
+            false
+        )
         return binding.root
     }
 
@@ -54,11 +58,15 @@ class MoreFragment : Fragment() {
 
         binding.listViewItems.adapter = adapter
         binding.listViewItems.visibility = View.VISIBLE
-        binding.listViewItems.setBackgroundColor(android.graphics.Color.TRANSPARENT)
+        binding.listViewItems.setBackgroundColor(
+            android.graphics.Color.TRANSPARENT
+        )
 
         binding.listViewItems.setOnItemClickListener { _, _, position, _ ->
 
             when (position) {
+
+                // PROFIL PENGGUNA
                 0 -> {
                     val username = sharedPref.getString(
                         "username",
@@ -78,25 +86,31 @@ class MoreFragment : Fragment() {
                     ).show()
                 }
 
+                // LOGOUT
                 1 -> {
+                    if (!isAdded) {
+                        return@setOnItemClickListener
+                    }
+
                     AlertDialog.Builder(requireContext())
                         .setTitle("Keluar dari MindCare?")
                         .setMessage(
                             "Apakah kamu yakin ingin keluar dari akunmu?"
                         )
-                        .setPositiveButton("Ya, Logout") { dialog, _ ->
+                        .setPositiveButton("Ya, Logout") { _, _ ->
+
                             sharedPref.edit().clear().apply()
 
-                            dialog.dismiss()
-
-                            startActivity(
-                                Intent(
-                                    requireContext(),
-                                    LoginActivity::class.java
-                                )
+                            val intent = Intent(
+                                requireActivity(),
+                                LoginActivity::class.java
                             )
 
-                            requireActivity().finish()
+                            intent.flags =
+                                Intent.FLAG_ACTIVITY_NEW_TASK or
+                                        Intent.FLAG_ACTIVITY_CLEAR_TASK
+
+                            startActivity(intent)
                         }
                         .setNegativeButton("Batal", null)
                         .show()
