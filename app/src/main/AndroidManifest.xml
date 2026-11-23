@@ -14,6 +14,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Nadini_3TIB">
 
+        <activity android:name=".Message.KonsultasiFormActivity" />
+
         <!-- SplashScreen sebagai halaman pertama -->
         <activity
             android:name=".SplashScreen"

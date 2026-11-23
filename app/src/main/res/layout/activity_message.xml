@@ -42,4 +42,35 @@
 
     </ScrollView>
 
+    <LinearLayout
+        android:id="@+id/layoutInputChat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        android:gravity="center_vertical"
+        android:background="#FFFDF5">
+
+        <EditText
+            android:id="@+id/editPesanChat"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:minHeight="48dp"
+            android:hint="Tulis pesan..."
+            android:padding="12dp"
+            android:inputType="textCapSentences|textMultiLine"
+            android:maxLines="4" />
+
+        <Button
+            android:id="@+id/btnKirimChat"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_marginStart="8dp"
+            android:text="Kirim"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/kuning" />
+
+    </LinearLayout>
+
 </LinearLayout>

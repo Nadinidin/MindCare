@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    android:background="@drawable/pp2">
+
+    <!-- Header -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarForm"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/kuning"
+        app:title="Tambah Tenaga Profesional"
+        app:titleTextColor="@color/black"
+        app:navigationIcon="@drawable/ic_arrow_back" />
+
+    <!-- Form -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <EditText
+                android:id="@+id/editNama"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nama tenaga profesional"
+                android:inputType="textPersonName"
+                android:layout_marginBottom="16dp" />
+
+            <EditText
+                android:id="@+id/editPesan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Pesan"
+                android:inputType="textMultiLine"
+                android:minLines="2"
+                android:layout_marginBottom="16dp" />
+
+            <EditText
+                android:id="@+id/editAvatarUrl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="URL Avatar"
+                android:inputType="textUri"
+                android:layout_marginBottom="16dp" />
+
+            <EditText
+                android:id="@+id/editKategori"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Kategori (Psikiater/Psikolog)"
+                android:inputType="text"
+                android:layout_marginBottom="16dp" />
+
+            <EditText
+                android:id="@+id/editDistance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Jarak (contoh: 4 km)"
+                android:inputType="text"
+                android:layout_marginBottom="16dp" />
+
+            <EditText
+                android:id="@+id/editTravelTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Waktu perjalanan (contoh: 10 menit)"
+                android:inputType="text"
+                android:layout_marginBottom="24dp" />
+
+            <Button
+                android:id="@+id/btnSimpan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Simpan Data"
+                android:textColor="@color/black"
+                android:backgroundTint="@color/kuning" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

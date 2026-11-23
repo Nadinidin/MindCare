@@ -5,17 +5,20 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.nadini_3tib.data.database.KonsultasiDatabase
+import com.example.nadini_3tib.data.repository.KonsultasiRepository
 import com.example.nadini_3tib.databinding.FragmentMessageBinding
+import kotlinx.coroutines.launch
 
 class MessageFragment : Fragment() {
 
     private var _binding: FragmentMessageBinding? = null
     private val binding get() = _binding!!
 
-    private lateinit var daftarPsikiater: List<MessageModel>
-    private lateinit var daftarPsikolog: List<MessageModel>
+    private lateinit var repository: KonsultasiRepository
+    private var kategoriAktif = "Psikiater"
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -36,81 +39,12 @@ class MessageFragment : Fragment() {
         binding.toolbar.title = "Konsultasi"
         binding.toolbar.subtitle = "Layanan kesehatan mental"
 
+        val database = KonsultasiDatabase.getDatabase(requireContext())
+        repository = KonsultasiRepository(database.konsultasiDao())
 
-        // Data Psikiater
-        daftarPsikiater = listOf(
-            MessageModel(
-                "Dr. Andini Putri, Sp.KJ",
-                "Halo, ada yang ingin kamu ceritakan?",
-                "https://i.pravatar.cc/150?img=47",
-                "12 km",
-                "25 menit"
-            ),
-            MessageModel(
-                "Dr. Rizky Pratama, Sp.KJ",
-                "Siap membantu kesehatan mentalmu.",
-                "https://i.pravatar.cc/150?img=12",
-                "5 km",
-                "12 menit"
-            ),
-            MessageModel(
-                "Dr. Maya Lestari, Sp.KJ",
-                "Mari bicarakan apa yang kamu rasakan.",
-                "https://i.pravatar.cc/150?img=44",
-                "8 km",
-                "18 menit"
-            ),
-            MessageModel(
-                "Dr. Fajar Ramadhan, Sp.KJ",
-                "Kesehatan mentalmu adalah prioritas.",
-                "https://i.pravatar.cc/150?img=13",
-                "15 km",
-                "30 menit"
-            )
-        )
-
-        // Data Psikolog
-        daftarPsikolog = listOf(
-            MessageModel(
-                "Psikolog Budi Santoso, M.Psi.",
-                "Jangan ragu untuk berbagi cerita.",
-                "https://i.pravatar.cc/150?img=12",
-                "4 km",
-                "10 menit"
-            ),
-            MessageModel(
-                "Psikolog Siti Rahma, M.Psi.",
-                "Bagaimana kabarmu hari ini?",
-                "https://i.pravatar.cc/150?img=44",
-                "7 km",
-                "15 menit"
-            ),
-            MessageModel(
-                "Psikolog Nadia Putri, M.Psi.",
-                "Aku siap mendengarkan ceritamu.",
-                "https://i.pravatar.cc/150?img=47",
-                "10 km",
-                "20 menit"
-            ),
-            MessageModel(
-                "Psikolog Dimas Pratama, M.Psi.",
-                "Mari kenali dirimu lebih baik.",
-                "https://i.pravatar.cc/150?img=13",
-                "6 km",
-                "14 menit"
-            )
-        )
-
-        // Mengatur RecyclerView menjadi Grid 2 kolom
         binding.recyclerMessageItems.layoutManager =
             GridLayoutManager(requireContext(), 2)
 
-        binding.recyclerMessageItems.adapter = MessageAdapter(
-            requireContext(),
-            daftarPsikiater
-        )
-
-        // Membuat TabLayout
         binding.tabKonsultasi.addTab(
             binding.tabKonsultasi.newTab().setText("Psikiater")
         )
@@ -119,23 +53,37 @@ class MessageFragment : Fragment() {
             binding.tabKonsultasi.newTab().setText("Psikolog")
         )
 
-        // Mengganti data berdasarkan tab yang dipilih
+        lifecycleScope.launch {
+
+            repository.isiDataAwalJikaKosong()
+
+            tampilkanData("Psikiater")
+
+        }
+
+        binding.fabTambahKonsultasi.setOnClickListener {
+            val intent = android.content.Intent(
+                requireContext(),
+                KonsultasiFormActivity::class.java
+            )
+            startActivity(intent)
+        }
+
         binding.tabKonsultasi.addOnTabSelectedListener(
             object : com.google.android.material.tabs.TabLayout.OnTabSelectedListener {
 
                 override fun onTabSelected(
                     tab: com.google.android.material.tabs.TabLayout.Tab
                 ) {
-                    val daftarPilihan = if (tab.position == 0) {
-                        daftarPsikiater
+                    kategoriAktif = if (tab.position == 0) {
+                        "Psikiater"
                     } else {
-                        daftarPsikolog
+                        "Psikolog"
                     }
 
-                    binding.recyclerMessageItems.adapter = MessageAdapter(
-                        requireContext(),
-                        daftarPilihan
-                    )
+                    lifecycleScope.launch {
+                        tampilkanData(kategoriAktif)
+                    }
                 }
 
                 override fun onTabUnselected(
@@ -149,6 +97,52 @@ class MessageFragment : Fragment() {
                 }
             }
         )
+    }
+
+    private suspend fun tampilkanData(kategori: String) {
+
+        val dataDatabase = repository.getKonsultasiByKategori(kategori)
+
+        val daftarModel = dataDatabase.map { data ->
+            MessageModel(
+                senderName = data.nama,
+                messageText = data.pesan,
+                avatarUrl = data.avatarUrl,
+                distance = data.distance,
+                travelTime = data.travelTime,
+                kategori = data.kategori,
+                id = data.id
+            )
+        }
+
+        binding.recyclerMessageItems.adapter = MessageAdapter(
+            requireContext(),
+            daftarModel
+        ) { id ->
+
+            androidx.appcompat.app.AlertDialog.Builder(requireContext())
+                .setTitle("Hapus Tenaga Profesional")
+                .setMessage("Apakah kamu yakin ingin menghapus data ini?")
+                .setPositiveButton("Hapus") { _, _ ->
+
+                    lifecycleScope.launch {
+                        repository.hapusKonsultasiById(id)
+                        tampilkanData(kategoriAktif)
+                    }
+                }
+                .setNegativeButton("Batal", null)
+                .show()
+        }
+    }
+
+    override fun onResume() {
+        super.onResume()
+
+        if (::repository.isInitialized && _binding != null) {
+            lifecycleScope.launch {
+                tampilkanData(kategoriAktif)
+            }
+        }
     }
 
     override fun onDestroyView() {

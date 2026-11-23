@@ -5,5 +5,7 @@ data class MessageModel(
     val messageText: String,
     val avatarUrl: String,
     val distance: String,
-    val travelTime: String
+    val travelTime: String,
+    val kategori: String,
+    val id: Int = 0
 )

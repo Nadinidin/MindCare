@@ -59,4 +59,14 @@
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
         tools:listitem="@layout/item_message" />
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabTambahKonsultasi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="20dp"
+        android:contentDescription="Tambah tenaga profesional"
+        android:src="@android:drawable/ic_input_add"
+        app:backgroundTint="@color/kuning"
+        app:tint="@color/black" />
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
