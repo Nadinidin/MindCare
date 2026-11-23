@@ -26,7 +26,7 @@ class KonsultasiFormActivity : AppCompatActivity() {
             finish()
         }
 
-        val idKonsultasi = intent.getIntExtra("ID", -1)
+        idKonsultasi = intent.getIntExtra("ID", -1)
 
             if (idKonsultasi != -1) {
             binding.toolbarForm.title = "Edit Tenaga Profesional"
